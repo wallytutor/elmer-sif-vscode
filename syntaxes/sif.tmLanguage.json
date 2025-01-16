@@ -354,7 +354,7 @@
                 {
                     "meta": "Solver (comes later because refers to other fields!)",
                     "name": "entity.name.function",
-                    "match": "\\b((Solver(\\s+)(\\d+))*(Stabilize|Optimize Bandwidth|Steady State Convergence Tolerance|Steady State Convergence Measure|Nonlinear System Convergence Tolerance|Nonlinear System Max Iterations|Nonlinear System Newton After Iterations|Nonlinear System Newton After Tolerance|Nonlinear System Relaxation Factor|Nonlinear System Convergence Measure|Linear System Solver|Linear System Iterative Method|Linear System Max Iterations|Linear System Convergence Tolerance|BiCGstabl polynomial degree|Linear System Preconditioning|Linear System ILUT Tolerance|Linear System Abort Not Converged|Linear System Residual Output|Linear System Precondition Recompute|Polyline(\\s+)Coordinates|Polyline(\\s+)Divisions|Parameter(\\s+)(\\d+)))\\b"
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Stabilize|Optimize Bandwidth|Steady State Convergence Tolerance|Steady State Convergence Measure|Nonlinear System Convergence Tolerance|Nonlinear System Max Iterations|Nonlinear System Newton After Iterations|Nonlinear System Newton After Tolerance|Nonlinear System Relaxation Factor|Nonlinear System Convergence Measure|Linear System Solver|Linear System Iterative Method|Linear System Max Iterations|Linear System Convergence Tolerance|BiCGstabl polynomial degree|Linear System Preconditioning|Linear System ILUT Tolerance|Linear System Abort Not Converged|Linear System Residual Output|Linear System Precondition Recompute|Parameter(\\s+)(\\d+)))\\b"
                 },
                 {
                     "meta": "Body (comes later because refers to other fields!)",
@@ -385,6 +385,10 @@
                 {
                     "name": "entity.name.function",
                     "match": "\\b((Solver(\\s+)(\\d+))*(Mask(\\s+)(Variable|Name|Condition)))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Polyline(\\s+)(Coordinates|Divisions)))\\b"
                 }
             ]
         },
@@ -392,15 +396,23 @@
             "patterns": [
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Solver(\\s+)(\\d+))*(Filename))\\b"
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Filename(((\\s+)Numbering)?)))\\b"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Solver(\\s+)(\\d+))*(Output(\\s+)Format))\\b"
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Partition(((\\s+)Numbering)?)))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Output(\\s+)(Format|Directory)))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(File(\\s+)(Append)))\\b"
                 }
             ]
         },
-        "solver-SaveData" : {
+        "solver-SaveData": {
             "patterns": [
                 {
                     "name": "entity.name.function",
@@ -408,7 +420,11 @@
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Solver(\\s+)(\\d+))*(Operator))\\b"
+                    "match": "\\b((Solver(\\s+)(\\d+))*(((Parallel(\\s+))?)Operator))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Coefficient))\\b"
                 },
                 {
                     "name": "entity.name.function",
@@ -421,10 +437,38 @@
                 {
                     "name": "entity.name.function",
                     "match": "\\b((Solver(\\s+)(\\d+))*(Moving(\\s+)Mesh))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Show(\\s+)Norm(\\s+)Index))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Echo(\\s+)Values))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Cost(\\s+)Function(\\s+)Index))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Parallel(\\s+)Reduce))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Save(\\s+)(Eigenvalues|Eigenfrequencies)))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Boundary(\\s+)Condition(\\s+)(\\d+))*(Save(\\s+)Scalars))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Scalars(\\s+)File))\\b"
                 }
             ]
         },
-        "solver-ResultOutputSolver" : {
+        "solver-ResultOutputSolver": {
             "patterns": [
                 {
                     "name": "entity.name.function",
