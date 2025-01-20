@@ -36,6 +36,9 @@
             "include": "#solver-ResultOutputSolver"
         },
         {
+            "include": "#material-data"
+        },
+        {
             "include": "#datatypes"
         },
         {
@@ -288,26 +291,6 @@
                     "match": "\\b(Calculate(\\s+)(Flux|Grad)(((\\s+)Magnitude)?))\\b"
                 },
                 {
-                    "meta": "Material",
-                    "name": "entity.name.function",
-                    "match": "\\b(Density)\\b"
-                },
-                {
-                    "meta": "Material",
-                    "name": "entity.name.function",
-                    "match": "\\b(Sound(\\s+)speed|Youngs(\\s+)modulus|Poisson(\\s+)ratio)\\b"
-                },
-                {
-                    "meta": "Material",
-                    "name": "entity.name.function",
-                    "match": "\\b(Heat(\\s+)Capacity|Heat(\\s+)Conductivity|Heat(\\s+)expansion(\\s+)Coefficient)\\b"
-                },
-                {
-                    "meta": "Material",
-                    "name": "entity.name.function",
-                    "match": "\\b(Concentration(\\s+)Diffusivity)\\b"
-                },
-                {
                     "meta": "Boundary Condition",
                     "name": "entity.name.function",
                     "match": "\\b(Target(\\s+)Boundaries)\\b"
@@ -537,6 +520,46 @@
                 {
                     "name": "entity.name.function",
                     "match": "\\b(Save(\\s+)(Bulk|Boundaries)(\\s+)Only)\\b"
+                }
+            ]
+        },
+        "material-data": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Density))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Heat(\\s+)Capacity))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Enthalpy))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Heat(\\s+)Conductivity))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Heat(\\s+)expansion(\\s+)Coefficient))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Sound(\\s+)speed))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Youngs(\\s+)modulus))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Poisson(\\s+)ratio))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Concentration(\\s+)Diffusivity))\\b"
                 }
             ]
         },
