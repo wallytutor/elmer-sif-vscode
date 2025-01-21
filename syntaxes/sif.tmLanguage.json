@@ -36,6 +36,9 @@
             "include": "#solver-ResultOutputSolver"
         },
         {
+            "include": "#solver-StressSolver"
+        },
+        {
             "include": "#material-data"
         },
         {
@@ -278,7 +281,7 @@
                     "meta": "many",
                     "name": "entity.name.function",
                     "match": "\\b(Name|Save(\\s+)(Flux|Line)|Size)\\b"
-                    
+
                 },
                 {
                     "meta": "Solver",
@@ -523,6 +526,18 @@
                 }
             ]
         },
+        "solver-StressSolver": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Solver(\\s+)(\\d+))*(Variable(\\s+)DOFs))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Boundary(\\s+)Condition(\\s+)(\\d+))*(Displacement))\\b"
+                }
+            ]
+        },
         "material-data": {
             "patterns": [
                 {
@@ -543,28 +558,33 @@
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Material(\\s+)(\\d+))*(Heat(\\s+)expansion(\\s+)Coefficient))\\b"
+                    "match": "\\b((Material(\\s+)(\\d+))*(Heat(\\s+)(e|E)xpansion(\\s+)(c|C)oefficient))\\b"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Material(\\s+)(\\d+))*(Sound(\\s+)speed))\\b"
+                    "match": "\\b((Material(\\s+)(\\d+))*(Sound(\\s+)(s|S)peed))\\b"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Material(\\s+)(\\d+))*(Youngs(\\s+)modulus))\\b"
+                    "match": "\\b((Material(\\s+)(\\d+))*(Youngs(\\s+)(m|M)odulus))\\b"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Material(\\s+)(\\d+))*(Poisson(\\s+)ratio))\\b"
+                    "match": "\\b((Material(\\s+)(\\d+))*(Poisson(\\s+)(r|R)atio))\\b"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Material(\\s+)(\\d+))*(Concentration(\\s+)Diffusivity))\\b"
+                    "match": "\\b((Material(\\s+)(\\d+))*(Concentration(\\s+)(d|D)iffusivity))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Reference(\\s+)(t|T)emperature))\\b"
                 }
             ]
         },
+
         "moretags": {
-            "comment": "TODO: these should match any text (non-string) after equal", 
+            "comment": "TODO: these should match any text (non-string) after equal",
             "patterns": [
                 {
                     "name": "entity.name.tag",
