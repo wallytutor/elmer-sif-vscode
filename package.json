@@ -1,45 +1,73 @@
 {
-	"name": "sif",
-	"displayName": "SIF",
-	"description": "Elmer SIF",
-	"publisher": "Walter Dal'Maz Silva",
-	"author": "Walter Dal'Maz Silva",
-	"license": "GNU GPL V3",
-	"version": "0.1.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/wallytutor/elmer-sif-vscode"
-	},
-	"engines": {
-		"vscode": "^1.68.0"
-	},
-	"categories": [
-		"Programming Languages"
-	],
-	"contributes": {
-		"languages": [
-			{
-				"id": "sif",
-				"aliases": [
-					"SIF",
-					"sif"
-				],
-				"extensions": [
-					".SIF",
-					".sif"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "sif",
-				"scopeName": "source.sif",
-				"path": "./syntaxes/sif.tmLanguage.json"
-			}
-		]
-	},
-	"__metadata": {
-		"size": 13490
-	}
+    "name": "vscode-sif",
+    "displayName": "vscode-sif",
+    "version": "0.1.0",
+    "publisher": "Walter-Dal-Maz-Silva",
+    "description": "Elmer SIF support in Visual Studio Code",
+    "author": {
+        "name": "Walter Dal'Maz Silva"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "logo/logo.png",
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
+    "pricing": "Free",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "license": "SEE IN LICENSE",
+    "bugs": {
+        "url": "https://github.com/wallytutor/elmer-sif-vscode/issues/",
+        "email": "walter.dalmazsilva.manager@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wallytutor/elmer-sif-vscode.git"
+    },
+    "homepage": "https://github.com/wallytutor/elmer-sif-vscode",
+
+    "keywords": [
+        "Elmer",
+        "language"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "sif",
+                "aliases": [
+                    "SIF",
+                    "sif"
+                ],
+                "extensions": [
+                    ".sif"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "sif",
+                "scopeName": "source.sif",
+                "path": "./syntaxes/sif.tmLanguage.json"
+            }
+        ]
+    },
+    "__metadata": {
+        "id": "1ac0881a-fd8e-64cf-9141-f5d1ce3f5ff7",
+        "publisherId": "1ac0881a-fd8e-64cf-9141-f5d1ce3f5ff7",
+        "publisherDisplayName": "Walter Dal'Maz Silva",
+        "targetPlatform": "undefined",
+        "isApplicationScoped": false,
+        "isPreReleaseVersion": false,
+        "hasPreReleaseVersion": false,
+        "installedTimestamp": 1736852018921,
+        "pinned": false,
+        "preRelease": false,
+        "source": "gallery",
+        "size": 135640
+    }
 }

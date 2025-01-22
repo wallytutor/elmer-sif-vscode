@@ -3,7 +3,7 @@
   xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Language="en-US" Id="vscode-elmer-sif" Version="0.1.0"
-      Publisher="Walter Dal'Maz Silva" />
+      Publisher="Walter-Dal-Maz-Silva" />
     <DisplayName>vscode-elmer-sif</DisplayName>
     <Description xml:space="preserve">Elmer SIF support in Visual Studio Code</Description>
     <Tags>Elmer,language,SIF,__ext_sif</Tags>
