@@ -146,6 +146,10 @@
             "patterns": [
                 {
                     "name": "keyword.control.sif",
+                    "match": "\\b((I|i)nclude)\\b"
+                },
+                {
+                    "name": "keyword.control.sif",
                     "match": "\\b(Header)\\b"
                 },
                 {
