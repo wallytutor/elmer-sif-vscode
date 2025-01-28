@@ -24,6 +24,12 @@
             "include": "#fieldsbackref"
         },
         {
+            "include": "#constants"
+        },
+        {
+            "include": "#simulation"
+        },
+        {
             "include": "#solver-General"
         },
         {
@@ -202,81 +208,6 @@
                     "match": "\\b(CHECK(\\s+)KEYWORDS|Mesh(\\s+)DB|Include(\\s+)Path|Results(\\s+)Directory)\\b"
                 },
                 {
-                    "meta": "Constants",
-                    "name": "entity.name.function",
-                    "match": "\\b(Gravity)\\b"
-                },
-                {
-                    "meta": "Constants",
-                    "name": "entity.name.function",
-                    "match": "\\b(Stefan(\\s+)Boltzmann)\\b"
-                },
-                {
-                    "meta": "Constants",
-                    "name": "entity.name.function",
-                    "match": "\\b(Permittivity(\\s+)of(\\s+)Vacuum)\\b"
-                },
-                {
-                    "meta": "Constants",
-                    "name": "entity.name.function",
-                    "match": "\\b(Permeability(\\s+)of(\\s+)Vacuum)\\b"
-                },
-                {
-                    "meta": "Constants",
-                    "name": "entity.name.function",
-                    "match": "\\b(Boltzmann(\\s+)Constant)\\b"
-                },
-                {
-                    "meta": "Constants",
-                    "name": "entity.name.function",
-                    "match": "\\b(Unit(\\s+)Charge)\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(((Solver(\\s+)Input|Post|Output)(\\s+)File)|(Restart(\\s+)(File|Position|Time)))\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(Max(\\s+)Output(\\s+)Level)\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(Coordinate(\\s+)(System|Mapping))\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(Simulation(\\s+)Type)\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(Steady(\\s+)State(\\s+)Max(\\s+)Iterations)\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(Output(\\s+)Intervals|Timestep(\\s+)intervals|Timestep(\\s+)Sizes|Timestepping(\\s+)Method)\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(BDF(\\s+)Order|Newmark(\\s+)Beta)\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(Binary(\\s+)Output)\\b"
-                },
-                {
-                    "meta": "Simulation",
-                    "name": "entity.name.function",
-                    "match": "\\b(Output(\\s+)Variable(\\s+)(\\d+))\\b"
-                },
-                {
                     "meta": "Equation",
                     "name": "entity.name.function",
                     "match": "\\b(Active(\\s+)Solvers|Concentration(\\s+)Units)\\b"
@@ -354,6 +285,94 @@
             ]
         },
 
+        "constants": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Constants)*(Gravity))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Constants)*(Stefan(\\s+)Boltzmann))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Constants)*(Permittivity(\\s+)of(\\s+)Vacuum))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Constants)*(Permeability(\\s+)of(\\s+)Vacuum))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Constants)*(Boltzmann(\\s+)Constant))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Constants)*(Unit(\\s+)Charge))\\b"
+                }
+            ]
+        },
+        "simulation": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*((Solver(\\s+)Input|Post)(\\s+)File))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Coordinate(\\s+)(System|Mapping)))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Output(\\s+)(File|Variable(\\s+)(\\d+))))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Restart(\\s+)(File|Position|Variable(\\s+)(\\d+)|Time(((\\s+)Ignore)?))))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Binary(\\s+)Output))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Max(\\s+)Output(\\s+)Level))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Simulation(\\s+)Type))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Steady(\\s+)State(\\s+)Max(\\s+)Iterations))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Output(\\s+)Intervals))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Timestep(\\s+)intervals))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Timestep(\\s+)Sizes))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Timestepping(\\s+)Method))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(BDF(\\s+)Order))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Newmark(\\s+)Beta))\\b"
+                }
+            ]
+        },
         "solver-General": {
             "patterns": [
                 {
