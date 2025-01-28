@@ -152,23 +152,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.sif",
-                    "match": "\\b((I|i)nclude)\\b"
-                },
-                {
-                    "name": "keyword.control.sif",
-                    "match": "\\b(Header)\\b"
-                },
-                {
-                    "name": "keyword.control.sif",
-                    "match": "\\b(Simulation)\\b"
-                },
-                {
-                    "name": "keyword.control.sif",
-                    "match": "\\b(Constants)\\b"
-                },
-                {
-                    "name": "keyword.control.sif",
-                    "match": "\\b(Run(\\s+)Control)\\b"
+                    "match": "\\b(^(I|i)nclude)\\b"
                 },
                 {
                     "name": "keyword.control.sif",
@@ -176,27 +160,43 @@
                 },
                 {
                     "name": "keyword.control.sif",
-                    "match": "\\b((Solver)(\\s+)(\\d+))\\b"
+                    "match": "\\b(^Header$)\\b"
                 },
                 {
                     "name": "keyword.control.sif",
-                    "match": "\\b((Equation)(\\s+)(\\d+))\\b"
+                    "match": "\\b(^Simulation$)\\b"
                 },
                 {
                     "name": "keyword.control.sif",
-                    "match": "\\b((Material)(\\s+)(\\d+))\\b"
+                    "match": "\\b(^Constants$)\\b"
                 },
                 {
                     "name": "keyword.control.sif",
-                    "match": "\\b((Body(((\\s+)Force)?))(\\s+)(\\d+))\\b"
+                    "match": "\\b(^Run(\\s+)Control$)\\b"
                 },
                 {
                     "name": "keyword.control.sif",
-                    "match": "\\b(((Initial|Boundary)(\\s+)Condition)(\\s+)(\\d+))\\b"
+                    "match": "\\b(^(Solver)(\\s+)(\\d+)$)\\b"
                 },
                 {
                     "name": "keyword.control.sif",
-                    "match": "\\b((Component)(\\s+)(\\d+))\\b"
+                    "match": "\\b(^(Equation)(\\s+)(\\d+)$)\\b"
+                },
+                {
+                    "name": "keyword.control.sif",
+                    "match": "\\b(^(Material)(\\s+)(\\d+)$)\\b"
+                },
+                {
+                    "name": "keyword.control.sif",
+                    "match": "\\b(^(Body(((\\s+)Force)?))(\\s+)(\\d+)$)\\b"
+                },
+                {
+                    "name": "keyword.control.sif",
+                    "match": "\\b(^((Initial|Boundary)(\\s+)Condition)(\\s+)(\\d+)$)\\b"
+                },
+                {
+                    "name": "keyword.control.sif",
+                    "match": "\\b(^(Component)(\\s+)(\\d+)$)\\b"
                 }
             ]
         },
