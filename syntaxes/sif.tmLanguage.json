@@ -45,6 +45,9 @@
             "include": "#solver-StressSolver"
         },
         {
+            "include": "#solver-HeatSolver"
+        },
+        {
             "include": "#material-data"
         },
         {
@@ -370,6 +373,10 @@
                 {
                     "name": "entity.name.function",
                     "match": "\\b((Simulation)*(Newmark(\\s+)Beta))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Simulation)*(Convergence(\\s+)Monitor))\\b"
                 }
             ]
         },
@@ -558,6 +565,14 @@
                 {
                     "name": "entity.name.function",
                     "match": "\\b((Boundary(\\s+)Condition(\\s+)(\\d+))*(Displacement))\\b"
+                }
+            ]
+        },
+        "solver-HeatSolver": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Equation(\\s+)(\\d+))*(Phase(\\s+)Change(\\s+)Model))\\b"
                 }
             ]
         },
