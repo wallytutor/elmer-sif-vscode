@@ -2,6 +2,12 @@
 
 VS Code extension for Elmer Multiphysics SIF.
 
+## Installation
+
+Use command `Developer: Install Extension from Location` and select this directory. 
+
+## Legacy manual install
+
 Just drop this directory inside your `.vscode` directory, it should work.
 
 If you have problems, assuming your user is called `admin` under Windows, add the following snipped to the `.vscode/extensions.json`.
