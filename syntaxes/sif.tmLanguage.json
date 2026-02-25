@@ -617,6 +617,10 @@
                 {
                     "name": "entity.name.function",
                     "match": "\\b((Material(\\s+)(\\d+))*(Reference(\\s+)(t|T)emperature))\\b"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b((Material(\\s+)(\\d+))*(Phase(\\s+)(c|C)hange(\\s+)(i|I)ntervals))\\b"
                 }
             ]
         },
