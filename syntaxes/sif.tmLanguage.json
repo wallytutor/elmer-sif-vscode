@@ -352,15 +352,15 @@
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Simulation)*(Output(\\s+)Intervals))\\b"
+                    "match": "\\b((Simulation)*(Output(\\s+)(I|i)ntervals))\\b"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Simulation)*(Timestep(\\s+)intervals))\\b"
+                    "match": "\\b((Simulation)*(Timestep(\\s+)(I|i)ntervals))\\b"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "\\b((Simulation)*(Timestep(\\s+)Sizes))\\b"
+                    "match": "\\b((Simulation)*(Timestep(\\s+)(S|s)izes))\\b"
                 },
                 {
                     "name": "entity.name.function",
